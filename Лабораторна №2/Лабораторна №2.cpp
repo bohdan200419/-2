@@ -15,19 +15,19 @@ int main() {
     }
     cout << endl;
    
-    int sum_of_positive = 0; // змінна, що зберігає суму додатніх елементів масиву
-    int product_of_elements = 1; // змінна, що зберігає добуток елементів масиву
-    bool found_max = false, found_min = false; // змінні, що вказують, чи було знайдено максимальний та мінімальний по модулю елементи
-    int max_index, min_index; // індекси максимального та мінімального по модулю елементів
+    int sum_of_positive = 0; 
+    int product_of_elements = 1; 
+    bool found_max = false, found_min = false; 
+    int max_index, min_index; 
 
-    // обчислюємо суму додатніх елементів та добуток всіх елементів масиву
+    
     for (int i = 0; i < n; i++) {
         if (arr[i] > 0) {
             sum_of_positive += arr[i];
         }
         product_of_elements *= arr[i];
 
-        // Пошук максимального та мінімального по модулю елементів
+        
         if (!found_max || abs(arr[i]) > abs(arr[max_index])) {
             max_index = i;
             found_max = true;
@@ -38,7 +38,7 @@ int main() {
         }
     }
 
-    // Обчислення добутку елементів масиву, що знаходяться між максимальним та мінімальним по модулю елементами
+   
     int product_between = 1;
     if (max_index < min_index) {
         for (int i = max_index + 1; i < min_index; i++) {
